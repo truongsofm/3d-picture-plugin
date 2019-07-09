@@ -1,151 +1,55 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en" >
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-<title>Vi Binh</title>
+  <meta charset="UTF-8">
+  <title>Love you Vi Binh</title>
+  
+  
+  
+      <link rel="stylesheet" href="./style.css">
 
-<link type="text/css" href="css/style.css" rel="stylesheet" />
-
+  
 </head>
+
 <body>
-<style class="cp-pen-styles">* {
-  margin: 0;
-  padding: 0;
-}
 
-html,
-body {
-  height: 100%;
-}
+  <div id="drag-container">
+  <div id="spin-container">
+    <!-- Đổi <div> (theo video) thành <img> để dễ dàng thêm, sửa, xoá các hình -->
+    <!-- Muốn thêm ảnh thì chỉ cần thêm tag <img> hoặc <video> -->
+    <img src="https://raw.githubusercontent.com/truongsofm/3d-picture-plugin/master/img/1.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+    <img src="https://raw.githubusercontent.com/truongsofm/3d-picture-plugin/master/img/2.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+    <img src="https://raw.githubusercontent.com/truongsofm/3d-picture-plugin/master/img/3.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+    <img src="https://raw.githubusercontent.com/truongsofm/3d-picture-plugin/master/img/4.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+    <img src="https://raw.githubusercontent.com/truongsofm/3d-picture-plugin/master/img/5.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+    <img src="https://raw.githubusercontent.com/truongsofm/3d-picture-plugin/master/img/6.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+    
+    <!-- Ví dụ thêm ảnh chứa link -->
+    <a target="_blank" href="https://images.pexels.com/photos/139829/pexels-photo-139829.jpeg">
+      <img src="https://images.pexels.com/photos/139829/pexels-photo-139829.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+    </a>
 
-body {
-  overflow: hidden;
-  display: flex;
-  background: #111;
-  perspective: 1000px;
-  transform-style: preserve-3d;
-}
+    <!-- Ví dụ thêm video  -->
+    <video controls autoplay="autoplay" loop>
+      <source src="https://player.vimeo.com/external/322244668.sd.mp4?s=338c48ac2dfcb1d4c0689968b5baf94eee6ca0c1&profile_id=165&oauth2_token_id=57447761" type="video/mp4">
+    </video>
 
-#box {
-  position: relative;
-  display: flex;
-  width: 130px;
-  height: 200px;
-  margin: auto;
-  transform-style: preserve-3d;
-  transform: rotateX(-10deg);
-}
-
-#box>img {
-  transform-style: preserve-3d;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  line-height: 200px;
-  font-size: 50px;
-  text-align: center;
-  box-shadow: 0 0 10px #fff;
-  -webkit-box-reflect: below 10px linear-gradient(#fff0, #fff4);
-}
-
-#box > p {
-  margin: auto;
-  transform: translateY(100px) rotateX(90deg);
-  background-color: #0005;
-  color: #fff;
-}</style></head><body>
-<div id="box" style="transform: rotateX(48.5869deg) rotateY(431.096deg);">
-<img src="https://imgur.com/kS1s5lU.jpg" alt="" style="transform: rotateY(0deg) translateZ(318px); transition: transform 1s ease 0s;">
-<img src="https://imgur.com/J1fnrDV.jpg" alt="" style="transform: rotateY(45deg) translateZ(318px); transition: transform 1s ease 0s;">
-<img src="https://imgur.com/WFIKapC.jpg" alt="" style="transform: rotateY(90deg) translateZ(318px); transition: transform 1s ease 0s;">
-<img src="https://imgur.com/HzLZLI8.jpg" alt="" style="transform: rotateY(135deg) translateZ(318px); transition: transform 1s ease 0s;">
-<img src="https://imgur.com/JTYFo1Z.jpg" alt="" style="transform: rotateY(180deg) translateZ(318px); transition: transform 1s ease 0s;">
-<img src="https://imgur.com/AVfYxR3.jpg" alt="" style="transform: rotateY(225deg) translateZ(318px); transition: transform 1s ease 0s;">
-<img src="https://imgur.com/k1pBRoa.jpg" alt="" style="transform: rotateY(270deg) translateZ(318px); transition: transform 1s ease 0s;">
-<img src="https://imgur.com/9If0Q3v.jpg" alt="" style="transform: rotateY(315deg) translateZ(318px); transition: transform 1s ease 0s;">
+    <!-- Dòng chữ ở giữa vòng xoay -->
+    <p>Vi Bình 01-01-2001</p>
+  </div>
+  <div id="ground"></div>
 </div>
-<script src="http://truongsofm.indoweb.xyz/vibinh/script.js"></script>
-<script id="rendered-js">
-          setTimeout(init, 100);
 
-var obox = document.getElementById('box');
-var aImg = obox.getElementsByTagName('img');
-var radius = 300;
+<div id="music-container"></div>
+  
+  
 
-function init(notDelay) {
-  for (var i = 0; i < aImg.length; i++) {
-    aImg[i].style.transform = "rotateY(" + i * (360 / aImg.length) + "deg) translateZ(" + radius + "px)";
-    aImg[i].style.transition = "transform 1s";
+    <script  src="./script.js"></script>
 
-    if (!notDelay) aImg[i].style.transitionDelay = (aImg.length - i) / 4 + "s";
-  }
-}
-var sX,sY,nX,nY,desX = 0,
-desY = 0,
-tX = 0,
-tY = 10,
-index = 0;
-document.onmousedown = function (e) {
-  clearInterval(obox.timer);
-  e = e || window.event;
-  var sX = e.clientX,
-  sY = e.clientY;
 
-  this.onmousemove = function (e) {
-    e = e || window.event;
-    var nX = e.clientX,
-    nY = e.clientY;
-    desX = nX - sX;
-    desY = nY - sY;
-    tX += desX * 0.1;
-    tY += desY * 0.1;
-    obox.style.transform = "rotateX(" + -tY + "deg) rotateY(" + tX + "deg)";
-    sX = nX;
-    sY = nY;
-  };
 
-  this.onmouseup = function (e) {
-    this.onmousemove = this.onmouseup = null;
-    obox.timer = setInterval(function () {
-      desX *= 0.95;
-      desY *= 0.95;
-      tX += desX * 0.1;
-      tY += desY * 0.1;
-      obox.style.transform = "rotateX(" + -tY + "deg) rotateY(" + tX + "deg)";
-      if (Math.abs(desX) < 0.5 && Math.abs(desY) < 0.5) {
-        clearInterval(obox.timer);
-      }
-    }, 13);
-  };
 
-  return false;
-};
-document.onmousewheel = function (e) {
-  e = e || window.event;
-  var d = e.wheelDelta / 20 || -e.detail;
-  // if (d > 0) {
-  //     index -= 20;
-  // } else {
-  //     index += 30;
-  // }
-  // if (index < -1050) {
-  //     index = -1050;
-  // }
-  // document.body.style.perspective = (1000 + index) + "px";
-  radius += d;
-  init(true);
-};
-
-function mousewheel(obj, fn) {
-  document.onmousewheel === null ? obj.onmousewheel : null;
-}
-// function addEvent(obj, eName, fn) {
-// 	obj.attackEvent?obj.attackEvent("on", eName, fn):null;
-// }
-          //# sourceURL=pen.js
-        </script>
-</body></html>
 </body>
+
 </html>
